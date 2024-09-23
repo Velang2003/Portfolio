@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velan - BCA Student Portfolio</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 60px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Main content styles */
+        main {
+            padding: 40px 0;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+	a {
+  	text-decoration: none;
+  	color: #000000;
+	}
+
+        /* Hero section styles */
+        #hero {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Skills section styles */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Projects section styles */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Education section styles */
+        .education-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        /* Contact section styles */
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #007bff;
+            color: #007bff;
+        }
+
+        .btn-outline:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="hero">
+            <h1>Velan</h1>
+            <p>BCA Student | Aspiring Full Stack Developer</p>
+            <div class="social-links">
+                <a href="https://github.com/Velang2003" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/velan-g-b79a0927b/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/velang2003/?hl=en" aria-label="Email"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm a passionate BCA student with a keen interest in software development. I love solving
+                complex problems and creating efficient, user-friendly applications. My goal is to
+                become a skilled full-stack developer and contribute to innovative projects in the tech industry.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <span class="skill-badge">Java</span>
+                <span class="skill-badge">C</span>
+                <span class="skill-badge">C++</span>
+                <span class="skill-badge">NetBeans</span>
+                <span class="skill-badge">C#</span>
+                <span class="skill-badge">HTML/CSS</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">Git</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+		<a href="https://resume-builder-by-velan.netlify.app/">
+               <div class="project-card">
+                    <h3>Resume-Builder</h3>
+                    <p>It allows users to easily create and edit their resumes directly within the browser using the contenteditable attribute. Additionally, it offers a convenient "Click to Download as PDF" feature for exporting the final resume.</p>
+                </div>
+		</a>
+			
+		<a href="https://github.com/Velang2003/JAVA-Quiz-Application">
+                <div class="project-card">
+                    <h3>JAVA-Quiz-Application</h3>
+                    <p>This Java application creates an interactive console-based quiz and GUI based quiz. Users are presented with a series of questions, and their responses are evaluated to determine their score.</p>
+                </div>
+		</a>
+
+		<a href="https://github.com/Velang2003/Java-Expense-Tracker">
+                <div class="project-card">
+                    <h3>JAVA-Expense-Tracker</h3>
+                    <p>The application provides a user-friendly GUI that allows users to create accounts, log in, track individual expenses, and categorize them. It also supports adding and deleting categories and provides an overview of overall expenses.</p>
+                </div>
+		</a>
+
+		<a href="https://github.com/Velang2003/Calculator">
+                <div class="project-card">
+                    <h3>JAVA-GUI-Calulator</h3>
+                    <p>This Java Calculator is a simple graphical user interface (GUI) application built using AWT. It performs basic arithmetic operations such as addition, subtraction, multiplication, and division.</p>
+                </div>
+		</a>
+
+
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-card">
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <p><a href="https://nublr.karnataka.gov.in/en"><u>Nrupathunga University</u></a>, 2023 - Present</p>
+                <p>CGPA: 9.58/10.0</p>
+                <p>Relevant Coursework: Data Structures, Algorithms, Database Management Systems</p>
+            </div>
+        </section>
+
+	<section id="experience">
+            <h2>Experience</h2>
+            <div class="education-card">
+                <h3>Frontend Web Developer</h3>
+                <p><a href="https://www.linkedin.com/in/justassign/"><u>Just Assign</u></a>, March 2024 - Present</p>
+                <p>. Leveraging Odoo to develop user-friendly and engaging websites.<br>
+. Designed and built responsive websites using Odoo's front-end development tools.<br>
+. Ensured a seamless user experience across all devices (desktop, tablet, mobile).<br>
+. Collaborated with back-end developers for smooth data integration.<br>
+. Implemented best practices for website performance and accessibility.<br></p>
+            </div>
+        <br>
+
+            <div class="education-card">
+                <h3>Java Programming Intern</h3>
+                <p><a href="https://www.linkedin.com/company/motioncut/"><u>MotionCut</u></a>, Aug 2024 - Sep 2024</p>
+                <p>. Interned at Motion Cut from August to September 2024.<br>
+. Gained hands-on experience in Java programming.<br>
+. Developed a quiz application using Swing.<br>
+. Created a URL compressor/decompressor console application.<br>
+. Built an expenses tracker application in NetBeans.<br></p>
+            </div>
+        <br>
+
+             <div class="education-card">
+                <h3>Web Development Intern</h3>
+                <p><a href="https://www.linkedin.com/company/codingraja/posts/?feedView=all"><u>Coding Raja</u></a>, March 2024 - Apr 2024</p>
+                <p>
+. Web-based resume builder.<br>
+. Created during internship with Coding Raja.<br>
+. Uses contenteditable for easy editing.<br>
+. Offers "Click to Download as PDF" feature.<br>
+. Allows users to create and edit resumes directly within the browser.<br>
+			</p>
+            </div>
+        </section>
+
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="contact-buttons">
+                <a href="mailto: velangabhay001@gmail.com" class="btn">Email Me</a>
+                <a href="https://www.linkedin.com/in/velan-g-b79a0927b/" class="btn btn-outline">Connect on LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with HTML and CSS. Hosted on Netlify.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/903adacbb6.js" crossorigin="anonymous"></script>
+</body>
+</html>
