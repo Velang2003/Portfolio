@@ -465,6 +465,25 @@
             color: var(--primary-color);
         }
 
+	.slider-container {
+            position: relative;
+            width: 90%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+       .slide-image {
+            width: 100%;
+            height: auto;
+            border: none;
+       }
+	    
     </style>
 </head>
 <body>
@@ -660,10 +679,23 @@
                     . Offers "Click to Download as PDF" feature.<br>
                     . Allows users to create and edit resumes directly within the browser.
                 </p>
-            </div>
-
+	    </div>
         </section>
 
+       <section class="slider-container , container">
+            <h2>Certifications</h2>
+            <div class="slider" id="slider">
+              <img src="certificates/c1.jpg" class="slide-image" alt="Certificate 1">
+              <img src="certificates/c2.jpg" class="slide-image" alt="Certificate 2">
+              <img src="certificates/c3.jpg" class="slide-image" alt="Certificate 3">
+              <img src="certificates/c4.jpg" class="slide-image" alt="Certificate 1">
+              <img src="certificates/c5.jpg" class="slide-image" alt="Certificate 2">
+              <img src="certificates/c6.jpg" class="slide-image" alt="Certificate 3">
+              <img src="certificates/c7.jpg" class="slide-image" alt="Certificate 2">
+              <img src="certificates/c8.jpg" class="slide-image" alt="Certificate 3">
+        </div>
+       </section>        
+	    
         <section id="education" class="container">
             <h2>Education</h2>
             <div class="education-item">
@@ -744,6 +776,19 @@
                 mobileMenuToggle.classList.remove('active');
             });
         });
+
+	//Certificates auto sliding 
+	    let currentIndex = 0;
+            const slider = document.getElementById('slider');
+            const slides = document.querySelectorAll('.slide-image');
+            const totalSlides = slides.length;
+
+            function slide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            const offset = -currentIndex * 100;
+            slider.style.transform = `translateX(${offset}%)`;
+	    }
+               setInterval(slide, 5000);	    
     </script>
     <script src="https://kit.fontawesome.com/903adacbb6.js" crossorigin="anonymous"></script>
 </body>
